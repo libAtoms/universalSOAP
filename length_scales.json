@@ -1,9 +1,0 @@
-{ 
-  "1"  : { "bond_len" : [ 1.2, "NB_auto_length_scale"], "min_bond_len" : [0.75, "NB_auto_length_scale"], "vol_per_atom" : [3.4, "NB_auto_length_scale"], "other links" : {} },
-  "5"  : { "bond_len" : [ 1.7, "NB_auto_length_scale"], "min_bond_len" : [1.7,  "NB_auto_length_scale"], "vol_per_atom" : [8.2, "NB_auto_length_scale"], "other links" : {} },
-  "14" : { "bond_len" : [ 2.4, "NB_auto_length_scale"], "min_bond_len" : [2.3,  "NB_auto_length_scale"], "vol_per_atom" : [20,  "NB_auto_length_scale"], "other links" : {} },
-  "32" : { "bond_len" : [ 2.5, "NB_auto_length_scale"], "min_bond_len" : [2.3,  "NB_auto_length_scale"], "vol_per_atom" : [23,  "NB_auto_length_scale"], "other links" : {} },
-  "37" : { "bond_len" : [ 4.7, "NB_auto_length_scale"], "min_bond_len" : [3.7,  "NB_auto_length_scale"], "vol_per_atom" : [81,  "NB_auto_length_scale"], "other links" : {} },
-  "52" : { "bond_len" : [ 3.1, "NB_auto_length_scale"], "min_bond_len" : [2.6,  "NB_auto_length_scale"], "vol_per_atom" : [31,  "NB_auto_length_scale"], "other links" : {} },
-  "57" : { "bond_len" : [ 3.7, "NB_auto_length_scale"], "min_bond_len" : [2.6,  "NB_auto_length_scale"], "vol_per_atom" : [36,  "NB_auto_length_scale"], "other links" : {} }
-}

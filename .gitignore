@@ -1,3 +1,4 @@
 *.pyc
 universal_SOAPs*.pdf
 ._*
+*.egg-info
