@@ -1,0 +1,35 @@
+#!/bin/bash
+#CCMS nprocs=16:network=single_node:regular
+#SBATCH --nice
+#PBS -l walltime=12:00:00 
+#PBS -N auto_length_scale
+#PBS -o auto_length_scale.stdout
+#PBS -e auto_length_scale.stderr
+#PBS -S /bin/bash
+
+if [ -s $HOME/.bashrc ]; then
+   . $HOME/.bashrc
+fi
+
+cd $PBS_O_WORKDIR
+startdir=`pwd`
+
+export WORK_DIR=$WORKDIR/$PBS_JOBID
+mkdir -p $WORK_DIR
+
+echo $WORK_DIR >> $startdir/auto_length_scale.$PBS_JOBID.stdout.rundir
+echo `hostname` >> $startdir/auto_length_scale.$PBS_JOBID.stdout.runmachine
+
+export USE_NP=16
+
+source ../calculator_var_args.sh
+
+for Z in `ls coordination_dependence_Z_*_*periodic.extxyz  | sed -e 's/.*_Z_//' -e 's/_.*//' | sort -k1n | uniq`; do
+    echo "doing Z $Z"
+    if [ ! -f OUTPUT_coordination_dependence_Z_${Z}_periodic.extxyz ] || \
+       [ ! -f OUTPUT_coordination_dependence_Z_${Z}_semiperiodic.extxyz ] || \
+       [ ! -f OUTPUT_coordination_dependence_Z_${Z}_nonperiodic.extxyz ]; then
+
+        ../auto_length_scale_relax.py coordination_dependence_Z_${Z}_*periodic.extxyz > relax.out
+    fi
+done

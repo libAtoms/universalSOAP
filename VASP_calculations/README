@@ -1,0 +1,13 @@
+scripts used to generate length scales using VASP calculations
+
+
+generate_do_all_lines: top level script, writes bash lines for setting up and submitting job for each element to be done
+
+do_auto_length_scale.sh: setup up calculation for one element, with specified scaling of initial length scale relative to ase.data.covalent_radii
+    submits job which runs auto_length_scale_relax.py
+    runs auto_length_scale_write_SETTINGS_Z.py to process output
+
+auto_length_scale_relax.py: relax the specified structures (periodic or non periodic)
+
+auto_length_scale_write_SETTINGS_Z.py: process relaxed outputs to formats used in earlier version of GAP-RSS scripts
+
