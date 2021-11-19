@@ -2,3 +2,5 @@
 universal_SOAPs*.pdf
 ._*
 *.egg-info
+build
+dist
