@@ -2,7 +2,7 @@ import setuptools
 
 setuptools.setup(
     name="universalSOAP",
-    version="0.1.0b",
+    version="0.1.0",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
     packages=setuptools.find_packages(exclude=["tests"]),
