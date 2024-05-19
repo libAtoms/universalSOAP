@@ -8,3 +8,7 @@ readme = "README.md"
 license = { file = "LICENSE" }
 
 scripts = { universalSOAP_descriptors = "universalSOAP.cli.write_descriptor_quantities:main" }
+
+[tool.setuptools.packages.find]
+
+exclude = [ "calculations*" ]
